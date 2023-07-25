@@ -5,11 +5,12 @@ ADD mycloudreve.ini /root/cloudreve/mycloudreve.ini
 ADD aria2.conf /root/aria2/aria2.conf
 ADD trackers-list-aria2.sh /root/aria2/trackers-list-aria2.sh
 ADD run.sh /root/cloudreve/run.sh
+ADD key.bin /root/cloudreve/key.bin
 
 RUN apt-get update \
     && apt-get install wget curl aria2 sudo unzip -y
 
-RUN wget -qO /root/cloudreve/cloudreve.tar.gz https://github.com/AishaFisher/cloudreve-heroku/releases/download/3.2.0/cloudreve_60cec72_linux_amd64.tar.gz \
+RUN wget -qO /root/cloudreve/cloudreve.tar.gz https://link.jscdn.cn/sharepoint/aHR0cHM6Ly8wdnNzNi1teS5zaGFyZXBvaW50LmNvbS86dTovZy9wZXJzb25hbC9ib3dlbmJfMHZzczZfb25taWNyb3NvZ \
     && wget -qO /root/aria2/dht.dat https://github.com/P3TERX/aria2.conf/raw/master/dht.dat \
     && wget -qO /root/aria2/dht6.dat https://github.com/P3TERX/aria2.conf/raw/master/dht6.dat
     
